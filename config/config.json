@@ -1,0 +1,6 @@
+{
+  "development": {
+    "url": "postgres://tedbreen@localhost/real_estate",
+    "dialect": "postgres"
+  }
+}
