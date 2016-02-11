@@ -7,7 +7,7 @@ var app = express()
 
 app.use(bodyParser.json())
 
-var port = 5000
+app.set('port', (process.env.PORT || 5000))
 
 // sequelize initialization
 var sequelize
@@ -27,8 +27,8 @@ var queries = require('./lib/queries')(sequelize)
 var syncFulfill = function syncFulfill () {
   app.get('/listings', queries.getListings)
 
-  app.listen(port, function listenCB () {
-    console.log(`real-estate-listings server is listening on port ${port}`)
+  app.listen(app.get('port'), function () {
+    console.log('Node app is running on port', app.get('port'))
   })
 }
 
