@@ -10,7 +10,13 @@ app.use(bodyParser.json())
 var port = 5000
 
 // sequelize initialization
-var sequelize = new Sequelize('postgres://tedbreen@localhost/real_estate')
+var sequelize
+if (process.env.NODE_ENV === 'production') {
+  sequelize = new Sequelize(process.env.DATABASE_URL)
+}
+else {
+  sequelize = new Sequelize('postgres://tedbreen@localhost/real_estate')
+}
 
 // initialize models
 var Listing = require('./models/listing.js')(sequelize)

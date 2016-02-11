@@ -2,5 +2,9 @@
   "development": {
     "url": "postgres://tedbreen@localhost/real_estate",
     "dialect": "postgres"
+  },
+  "production": {
+    "url": "postgres://vphhgqprwsgofp:lWy0nNuGhEYnLNoSxraZxYwUD_@ec2-54-225-215-233.compute-1.amazonaws.com:5432/dfhtmbquaun4op",
+    "dialect": "postgres"
   }
 }
