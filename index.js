@@ -5,6 +5,7 @@ var bodyParser = require('body-parser')
 // create app
 var app = express()
 
+app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.json())
 
 app.set('port', (process.env.PORT || 5000))
