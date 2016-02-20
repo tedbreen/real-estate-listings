@@ -4,38 +4,10 @@
   <title>Real Estate Listings</title>
 </head>
 <body>
-  <h2>Real Estate API</h2>
-  <p><strong>GET</strong> <a href="/listings?min_price=100000&max_price=200000&min_bed=2&max_bed=2&min_bath=2&max_bath=2">/listings?min_price=100000&max_price=200000&min_bed=2&max_bed=2&min_bath=2&max_bath=2</a></p>
-
-  <p>min_price: The minimum listing price in dollars.</p>
-  <p>max_price: The maximum listing price in dollars.</p>
-  <p>min_bed: The minimum number of bedrooms.</p>
-  <p>max_bed: The maximum number of bedrooms.</p>
-  <p>min_bath: The minimum number of bathrooms.</p>
-  <p>max_bath: The maximum number of bathrooms.</p>
-
-  <p>The expected response is a GeoJSON FeatureCollection of listings:</p>
-
-  <pre>
-    {
-      "type": "FeatureCollection",
-      "features": [
-        {
-          "type": "Feature",
-          "geometry": {"type": "Point", "coordinates": [-112.1,33.4]},
-          "properties": {
-      "id": "123ABC", # CSV id
-      "price": 200000, # Price in Dollars
-      "street": "123 Walnut St",
-            "bedrooms": 3, # Bedrooms
-            "bathrooms": 2, # Bathrooms
-            "sq_ft": 1500 # Square Footage
-        },
-        ...
-      ]
-    }
-  </pre>
-
-  <p>All query parameters are optional, all minimum and maximum fields should be inclusive (e.g. min_bed=2&max_bed=4 should return listings with 2, 3, or 4 bedrooms).</p>
+  <h2>Real Estate Listings API</h2>
+  <p>Endpoint:</p>
+  <strong>/listings</strong>
+  <p>For more details:</p>
+  <a href="https://github.com/tedbreen/real-estate-listings">https://github.com/tedbreen/real-estate-listings</a>
 </body>
 </html>
