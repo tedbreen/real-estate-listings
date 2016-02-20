@@ -36,7 +36,7 @@ The expected response is a GeoJSON FeatureCollection of listings:
 All query parameters are optional, all minimum and maximum fields should be inclusive (e.g. `min_bed=2&max_bed=4` should return listings with 2, 3, or 4 bedrooms).
 
 * API endpoint URL is `/listings`; **GET** requests only
-* API responds with valid (GeoJSON)[http://geojson.io]
+* API responds with valid [GeoJSON](http://geojson.io)
 * API correctly filters any combination of API parameters
 * Data is stored in a PostgreSQL database on Heroku
 
